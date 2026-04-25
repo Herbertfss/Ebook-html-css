@@ -1,84 +1,298 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebook - HTML e CSS</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ebook gratuito e completo sobre HTML e CSS - Do básico ao profissional. Aprenda criação de sites, flexbox, grid e técnicas modernas.">
+    <meta name="keywords" content="HTML, CSS, ebook, desenvolvimento web, front-end, tutorial, grátis">
+    <meta name="author" content="Herbert Freire">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herbertfss.github.io/Ebook-html-css/">
+    <meta property="og:title" content="Ebook HTML & CSS - Do Zero ao Profissional">
+    <meta property="og:description" content="Aprenda HTML e CSS de forma prática com este ebook gratuito e completo.">
+    <meta property="og:image" content="https://herbertfss.github.io/Ebook-html-css/assets/images/capa-ebook.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://herbertfss.github.io/Ebook-html-css/">
+    <meta property="twitter:title" content="Ebook HTML & CSS - Do Zero ao Profissional">
+    <meta property="twitter:description" content="Aprenda HTML e CSS de forma prática com este ebook gratuito e completo.">
+    
+    <title>Ebook HTML & CSS | Do Zero ao Profissional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 </head>
-
 <body>
-    <main class="container">
-        <section class="item-img">
-            <h1 class="titulo">[Ebook] Guia do HTML e CSS</h1>
-            <div class="separacao">
-            <p class="text">
-                Dê seus primeiros passos com desenvolvimento web e
-                aprenda a criar uma página do zero
-            </p>
-            <img src="https://d335luupugsy2.cloudfront.net/cms/files/45279/1549910747/%24s8wt5gjksqp" alt="">
-        </section>
-        <section class="item-form">
-            <form class="formulario">
-                <h2 class="titulo">
-                    Faça o download grátis aqui
-                </h2>
-                <p class="text">
-                    Preencha o formulário abaixo para acessar o ebook
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="ebook-badge">📖 EBOOK GRATUITO</div>
+                <h1 class="ebook-title">
+                    HTML & CSS
+                    <span class="title-sub">Do Zero ao Profissional</span>
+                </h1>
+                <p class="ebook-description">
+                    Aprenda as tecnologias fundamentais do desenvolvimento web de forma prática, 
+                    com exemplos reais e exercícios. Transforme ideias em sites incríveis!
                 </p>
-                <div class="fields">
-                    <label for="nome">Nome*</label>
-                    <input type="text" name="nome" id="nome">
-                    <label for="email">Email*</label>
-                    <input type="email" name="email" id="email">
-                    <label for="profissionalmente">
-                        Profissionalmente, você se considera:*
-                    </label>
-                    <select name="profissionalmente" id="profissionalmente">
-                        <option value="" selected>
-                            Selecione
-                        </option>
-                        <option value="junior">
-                            Júnior
-                        </option>
-                        <option value="pleno">
-                            Pleno
-                        </option>
-                        <option value="senior">
-                            Sênior
-                        </option>
-                    </select>
-                    <label for="objetivo">
-                        Qual é o seu objetivo?*
-                    </label>
-                    <select name="objetivo" id="objetivo">
-                        <option value="" selected>Selecione</option>
-                        <option value="iniciar">Entrar no mercado</option>
-                        <option value="melhorar">Aperfeiçoar minhas habilidades</option>
-                        <option value="networking">Aumentar meu networking</option>
-                    </select>
-                    <div class="radio">
-                        <p>Você possui interesse em iniciar um curso online?</p>
-                        <input type="radio" name="interesse-curso-online" id="sim" value="sim">
-                    </div>
-                    <div>
-                        <label for="sim">Sim</label>
-                        <input type="radio" name="interesse-curso-online" id="nao" value="nao">
-                        <label for="nao">Não</label>
-                    </div>
-                    <label for="pergunta">7 + 8?</label>
-                    <input type="text" id="pergunta" name="pergunta">
+                <div class="header-stats">
+                    <span class="stat"><i class="fas fa-file-code"></i> 12 Capítulos</span>
+                    <span class="stat"><i class="fas fa-clock"></i> Leitura de 4h</span>
+                    <span class="stat"><i class="fas fa-download"></i> 100% Gratuito</span>
                 </div>
-                <button class="btn">Aprender HTML e CSS agora!</button>
-                <span class="spam">
-                    Prometemos não utilizar suas informações de contato para enviar
-                    qualquer tipo de SPAM.
-                </span>
-            </form>
-        </section>
-    </main>
+            </div>
+        </header>
+        
+        <!-- Table of Contents -->
+        <nav class="table-of-contents" aria-label="Sumário">
+            <h2 class="toc-title">
+                <i class="fas fa-list-ul"></i>
+                Sumário
+            </h2>
+            <ul class="toc-list">
+                <li><a href="#cap1" class="toc-link">1. Introdução ao HTML</a></li>
+                <li><a href="#cap2" class="toc-link">2. Estrutura e Semântica HTML</a></li>
+                <li><a href="#cap3" class="toc-link">3. Formulários e Tabelas</a></li>
+                <li><a href="#cap4" class="toc-link">4. Fundamentos do CSS</a></li>
+                <li><a href="#cap5" class="toc-link">5. Box Model e Layout</a></li>
+                <li><a href="#cap6" class="toc-link">6. Flexbox - Guia Completo</a></li>
+                <li><a href="#cap7" class="toc-link">7. CSS Grid - Layout Moderno</a></li>
+                <li><a href="#cap8" class="toc-link">8. Responsividade e Mobile First</a></li>
+                <li><a href="#cap9" class="toc-link">9. Animações e Transições</a></li>
+                <li><a href="#cap10" class="toc-link">10. Projeto Prático 1</a></li>
+                <li><a href="#cap11" class="toc-link">11. Projeto Prático 2</a></li>
+                <li><a href="#cap12" class="toc-link">12. Publicando seu Site</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <article class="ebook-content">
+                <!-- Capítulo 1 -->
+                <section id="cap1" class="chapter">
+                    <h2 class="chapter-title">1. Introdução ao HTML</h2>
+                    <div class="chapter-content">
+                        <p>HTML (HyperText Markup Language) é a linguagem padrão para criação de páginas web. Ela fornece a estrutura básica dos sites, que é então estilizada pelo CSS e tornada interativa pelo JavaScript.</p>
+                        
+                        <h3>O que você vai aprender neste capítulo:</h3>
+                        <ul>
+                            <li>O que é HTML e como funciona</li>
+                            <li>Estrutura básica de um documento HTML</li>
+                            <li>Tags, elementos e atributos</li>
+                            <li>Seu primeiro código HTML</li>
+                        </ul>
+                        
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">HTML</span>
+                                <button class="copy-code" onclick="copyCode(this)">
+                                    <i class="far fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é meu primeiro site HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <div class="tip-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <strong>Dica Profissional:</strong> Sempre use a declaração <code>&lt;!DOCTYPE html&gt;</code> no início do documento para garantir que o navegador renderize a página em modo padrão.
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Capítulo 2 -->
+                <section id="cap2" class="chapter">
+                    <h2 class="chapter-title">2. Estrutura e Semântica HTML</h2>
+                    <div class="chapter-content">
+                        <p>A semântica HTML é fundamental para criar sites acessíveis, otimizados para SEO e de fácil manutenção. As tags semânticas descrevem o significado do conteúdo, não apenas sua aparência.</p>
+                        
+                        <h3>Tags Semânticas Principais:</h3>
+                        <div class="grid-2cols">
+                            <div class="semantic-card">
+                                <code>&lt;header&gt;</code>
+                                <p>Cabeçalho da página ou seção</p>
+                            </div>
+                            <div class="semantic-card">
+                                <code>&lt;nav&gt;</code>
+                                <p>Navegação principal</p>
+                            </div>
+                            <div class="semantic-card">
+                                <code>&lt;main&gt;</code>
+                                <p>Conteúdo principal único</p>
+                            </div>
+                            <div class="semantic-card">
+                                <code>&lt;article&gt;</code>
+                                <p>Conteúdo independente</p>
+                            </div>
+                            <div class="semantic-card">
+                                <code>&lt;section&gt;</code>
+                                <p>Grupo temático de conteúdo</p>
+                            </div>
+                            <div class="semantic-card">
+                                <code>&lt;aside&gt;</code>
+                                <p>Conteúdo complementar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Atenção:</strong> Evite usar divs para tudo! Prefira tags semânticas sempre que possível para melhorar a acessibilidade e o SEO.
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Capítulo 3 -->
+                <section id="cap3" class="chapter">
+                    <h2 class="chapter-title">3. Formulários e Tabelas</h2>
+                    <div class="chapter-content">
+                        <p>Formulários são essenciais para interagir com usuários, enquanto tabelas organizam dados de forma estruturada.</p>
+                        
+                        <h3>Exemplo de Formulário Moderno:</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">HTML</span>
+                                <button class="copy-code" onclick="copyCode(this)">
+                                    <i class="far fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                            <pre><code>&lt;form action="/enviar" method="POST"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required&gt;
+    
+    &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;
+    &lt;textarea id="mensagem" name="mensagem" rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                        
+                        <div class="exercise-box">
+                            <i class="fas fa-pencil-alt"></i>
+                            <strong>Exercício Prático:</strong> Crie um formulário de cadastro com campos para nome, email, senha e data de nascimento. Use validação HTML5!
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Capítulo 4 -->
+                <section id="cap4" class="chapter">
+                    <h2 class="chapter-title">4. Fundamentos do CSS</h2>
+                    <div class="chapter-content">
+                        <p>CSS (Cascading Style Sheets) é a linguagem que dá vida ao HTML, controlando cores, fontes, espaçamentos, posicionamento e muito mais.</p>
+                        
+                        <h3>Três Formas de Aplicar CSS:</h3>
+                        <div class="comparison-table">
+                            <div class="comparison-item">
+                                <strong>Inline</strong>
+                                <p>Direto no elemento HTML usando o atributo <code>style</code></p>
+                                <code class="small-code">&lt;p style="color: red;"&gt;&lt;/p&gt;</code>
+                            </div>
+                            <div class="comparison-item">
+                                <strong>Interno</strong>
+                                <p>Dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code></p>
+                                <code class="small-code">&lt;style&gt; p { color: red; } &lt;/style&gt;</code>
+                            </div>
+                            <div class="comparison-item">
+                                <strong>Externo</strong>
+                                <p>Arquivo .css separado (RECOMENDADO)</p>
+                                <code class="small-code">&lt;link rel="stylesheet" href="style.css"&gt;</code>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box">
+                            <i class="fas fa-rocket"></i>
+                            <strong>Boa Prática:</strong> Sempre use CSS externo para projetos reais. Isso mantém o código organizado, reutilizável e com melhor desempenho.
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre o Autor</h3>
+                    <p>Herbert Freire é desenvolvedor front-end apaixonado por educação e tecnologia. Criou este ebook para ajudar iniciantes a entrarem no mundo do desenvolvimento web.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Herbertfss" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Compartilhe</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareOnTwitter()">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </button>
+                        <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Licença</h3>
+                    <p>Este ebook é gratuito e de código aberto sob a licença MIT. Sinta-se à vontade para compartilhar e modificar!</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ebook HTML & CSS - Herbert Freire. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fas fa-heart"></i> para a comunidade de desenvolvedores</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
 </body>
-
 </html>
