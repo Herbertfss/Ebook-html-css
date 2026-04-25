@@ -150,55 +150,210 @@
       <!-- Main Content -->
       <main class="main-content">
         <article class="ebook-content">
-          <!-- Capítulo 1 (já existente) -->
+          <!-- Capítulo 1 -->
           <section id="cap1" class="chapter">
-            <!-- Mantenha o conteúdo existente do Capítulo 1 -->
-          </section>
-
-          <!-- Capítulo 2 (já existente) -->
-          <section id="cap2" class="chapter">
-            <!-- Mantenha o conteúdo existente do Capítulo 2 -->
-          </section>
-
-          <!-- Capítulo 3 (já existente) -->
-          <section id="cap3" class="chapter">
-            <!-- Mantenha o conteúdo existente do Capítulo 3 -->
-          </section>
-
-          <!-- Capítulo 4 (já existente) -->
-          <section id="cap4" class="chapter">
-            <!-- Mantenha o conteúdo existente do Capítulo 4 -->
-          </section>
-
-          <!-- Capítulo 5 -->
-          <section id="cap5" class="chapter">
-            <h2 class="chapter-title">5. Box Model e Layout</h2>
+            <h2 class="chapter-title">1. Introdução ao HTML</h2>
             <div class="chapter-content">
               <p>
-                O Box Model é fundamental para entender como os elementos HTML
-                ocupam espaço na página. Todo elemento é uma caixa retangular
-                com propriedades que afetam seu layout.
+                HTML (HyperText Markup Language) é a linguagem padrão para
+                criação de páginas web. Ela fornece a estrutura básica dos
+                sites, que é então estilizada pelo CSS e tornada interativa pelo
+                JavaScript.
               </p>
 
-              <h3>Componentes do Box Model:</h3>
+              <h3>O que você vai aprender neste capítulo:</h3>
               <ul>
-                <li><strong>Content</strong> - O conteúdo real do elemento</li>
-                <li>
-                  <strong>Padding</strong> - Espaço interno entre o conteúdo e a
-                  borda
-                </li>
-                <li><strong>Border</strong> - A borda ao redor do padding</li>
-                <li>
-                  <strong>Margin</strong> - Espaço externo entre elementos
-                </li>
+                <li>O que é HTML e como funciona</li>
+                <li>Estrutura básica de um documento HTML</li>
+                <li>Tags, elementos e atributos</li>
+                <li>Seu primeiro código HTML</li>
               </ul>
 
               <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
+                  <span class="code-language">HTML</span>
                   <button class="copy-code" onclick="copyCode(this)">
                     <i class="far fa-copy"></i> Copiar
                   </button>
+                </div>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é meu primeiro site HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+
+              <div class="tip-box">
+                <i class="fas fa-lightbulb"></i>
+                <strong>Dica Profissional:</strong> Sempre use a declaração
+                <code>&lt;!DOCTYPE html&gt;</code> no início do documento para
+                garantir que o navegador renderize a página em modo padrão.
+              </div>
+            </div>
+          </section>
+
+          <!-- Capítulo 2 -->
+          <section id="cap2" class="chapter">
+            <h2 class="chapter-title">2. Estrutura e Semântica HTML</h2>
+            <div class="chapter-content">
+              <p>
+                A semântica HTML é fundamental para criar sites acessíveis,
+                otimizados para SEO e de fácil manutenção. As tags semânticas
+                descrevem o significado do conteúdo, não apenas sua aparência.
+              </p>
+
+              <h3>Tags Semânticas Principais:</h3>
+              <div class="grid-2cols">
+                <div class="semantic-card">
+                  <code>&lt;header&gt;</code>
+                  <p>Cabeçalho da página ou seção</p>
+                </div>
+                <div class="semantic-card">
+                  <code>&lt;nav&gt;</code>
+                  <p>Navegação principal</p>
+                </div>
+                <div class="semantic-card">
+                  <code>&lt;main&gt;</code>
+                  <p>Conteúdo principal único</p>
+                </div>
+                <div class="semantic-card">
+                  <code>&lt;article&gt;</code>
+                  <p>Conteúdo independente</p>
+                </div>
+                <div class="semantic-card">
+                  <code>&lt;section&gt;</code>
+                  <p>Grupo temático de conteúdo</p>
+                </div>
+                <div class="semantic-card">
+                  <code>&lt;aside&gt;</code>
+                  <p>Conteúdo complementar</p>
+                </div>
+              </div>
+
+              <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Atenção:</strong> Evite usar divs para tudo! Prefira
+                tags semânticas sempre que possível para melhorar a
+                acessibilidade e o SEO.
+              </div>
+            </div>
+          </section>
+
+          <!-- Capítulo 3 -->
+          <section id="cap3" class="chapter">
+            <h2 class="chapter-title">3. Formulários e Tabelas</h2>
+            <div class="chapter-content">
+              <p>
+                Formulários são essenciais para interagir com usuários, enquanto
+                tabelas organizam dados de forma estruturada.
+              </p>
+
+              <h3>Exemplo de Formulário Moderno:</h3>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-language">HTML</span>
+                  <button class="copy-code" onclick="copyCode(this)">
+                    <i class="far fa-copy"></i> Copiar
+                  </button>
+                </div>
+                <pre><code>&lt;form action="/enviar" method="POST"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required&gt;
+    
+    &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;
+    &lt;textarea id="mensagem" name="mensagem" rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+
+              <div class="exercise-box">
+                <i class="fas fa-pencil-alt"></i>
+                <strong>Exercício Prático:</strong> Crie um formulário de
+                cadastro com campos para nome, email, senha e data de
+                nascimento. Use validação HTML5!
+              </div>
+            </div>
+          </section>
+
+          <!-- Capítulo 4 -->
+          <section id="cap4" class="chapter">
+            <h2 class="chapter-title">4. Fundamentos do CSS</h2>
+            <div class="chapter-content">
+              <p>
+                CSS (Cascading Style Sheets) é a linguagem que dá vida ao HTML,
+                controlando cores, fontes, espaçamentos, posicionamento e muito
+                mais.
+              </p>
+
+              <h3>Três Formas de Aplicar CSS:</h3>
+              <div class="comparison-table">
+                <div class="comparison-item">
+                  <strong>Inline</strong>
+                  <p>
+                    Direto no elemento HTML usando o atributo <code>style</code>
+                  </p>
+                  <code class="small-code"
+                    >&lt;p style="color: red;"&gt;&lt;/p&gt;</code
+                  >
+                </div>
+                <div class="comparison-item">
+                  <strong>Interno</strong>
+                  <p>
+                    Dentro da tag <code>&lt;style&gt;</code> no
+                    <code>&lt;head&gt;</code>
+                  </p>
+                  <code class="small-code"
+                    >&lt;style&gt; p { color: red; } &lt;/style&gt;</code
+                  >
+                </div>
+                <div class="comparison-item">
+                  <strong>Externo</strong>
+                  <p>Arquivo .css separado (RECOMENDADO)</p>
+                  <code class="small-code"
+                    >&lt;link rel="stylesheet" href="style.css"&gt;</code
+                  >
+                </div>
+              </div>
+
+              <div class="tip-box">
+                <i class="fas fa-rocket"></i>
+                <strong>Boa Prática:</strong> Sempre use CSS externo para
+                projetos reais. Isso mantém o código organizado, reutilizável e
+                com melhor desempenho.
+              </div>
+            </div>
+          </section>
+
+            <!-- Capítulo 5 -->
+    <section id="cap5" class="chapter">
+        <h2 class="chapter-title">5. Box Model e Layout</h2>
+        <div class="chapter-content">
+            <p>O Box Model é fundamental para entender como os elementos HTML ocupam espaço na página. Todo elemento é uma caixa retangular com propriedades que afetam seu layout.</p>
+            
+            <h3>Componentes do Box Model:</h3>
+            <ul>
+                <li><strong>Content</strong> - O conteúdo real do elemento</li>
+                <li><strong>Padding</strong> - Espaço interno entre o conteúdo e a borda</li>
+                <li><strong>Border</strong> - A borda ao redor do padding</li>
+                <li><strong>Margin</strong> - Espaço externo entre elementos</li>
+            </ul>
+            
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>/* Exemplo de Box Model */
 .caixa {
@@ -208,53 +363,47 @@
     margin: 15px;       /* Espaço externo */
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }</code></pre>
-              </div>
-
-              <div class="tip-box">
-                <i class="fas fa-lightbulb"></i>
-                <strong>Dica Essencial:</strong> Use
-                <code>box-sizing: border-box</code> em todos os elementos para
-                tornar o layout mais previsível!
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 6 -->
-          <section id="cap6" class="chapter">
-            <h2 class="chapter-title">6. Flexbox - Guia Completo</h2>
-            <div class="chapter-content">
-              <p>
-                Flexbox revolucionou a criação de layouts CSS, permitindo
-                alinhamento e distribuição de espaço de forma eficiente, mesmo
-                quando os tamanhos dos itens são dinâmicos.
-              </p>
-
-              <h3>Propriedades do Container Flex:</h3>
-              <div class="grid-2cols">
+            
+            <div class="tip-box">
+                <i class="fas fa-lightbulb"></i>
+                <strong>Dica Essencial:</strong> Use <code>box-sizing: border-box</code> em todos os elementos para tornar o layout mais previsível!
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 6 -->
+    <section id="cap6" class="chapter">
+        <h2 class="chapter-title">6. Flexbox - Guia Completo</h2>
+        <div class="chapter-content">
+            <p>Flexbox revolucionou a criação de layouts CSS, permitindo alinhamento e distribuição de espaço de forma eficiente, mesmo quando os tamanhos dos itens são dinâmicos.</p>
+            
+            <h3>Propriedades do Container Flex:</h3>
+            <div class="grid-2cols">
                 <div class="semantic-card">
-                  <code>display: flex</code>
-                  <p>Define o container como flexível</p>
+                    <code>display: flex</code>
+                    <p>Define o container como flexível</p>
                 </div>
                 <div class="semantic-card">
-                  <code>flex-direction</code>
-                  <p>Define direção (row, column)</p>
+                    <code>flex-direction</code>
+                    <p>Define direção (row, column)</p>
                 </div>
                 <div class="semantic-card">
-                  <code>justify-content</code>
-                  <p>Alinhamento horizontal</p>
+                    <code>justify-content</code>
+                    <p>Alinhamento horizontal</p>
                 </div>
                 <div class="semantic-card">
-                  <code>align-items</code>
-                  <p>Alinhamento vertical</p>
+                    <code>align-items</code>
+                    <p>Alinhamento vertical</p>
                 </div>
-              </div>
-
-              <div class="code-block">
+            </div>
+            
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>.container-flex {
     display: flex;
@@ -268,33 +417,28 @@
     flex: 1; /* Cresce igualmente */
     min-width: 200px;
 }</code></pre>
-              </div>
-
-              <div class="exercise-box">
-                <i class="fas fa-pencil-alt"></i>
-                <strong>Desafio:</strong> Crie uma navbar responsiva usando
-                Flexbox com logo no centro e links à direita!
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 7 -->
-          <section id="cap7" class="chapter">
-            <h2 class="chapter-title">7. CSS Grid - Layout Moderno</h2>
-            <div class="chapter-content">
-              <p>
-                CSS Grid é o sistema de layout bidimensional mais poderoso do
-                CSS, perfeito para criar layouts complexos e responsivos em duas
-                dimensões (linhas e colunas).
-              </p>
-
-              <h3>Conceitos Fundamentais:</h3>
-              <div class="code-block">
+            
+            <div class="exercise-box">
+                <i class="fas fa-pencil-alt"></i>
+                <strong>Desafio:</strong> Crie uma navbar responsiva usando Flexbox com logo no centro e links à direita!
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 7 -->
+    <section id="cap7" class="chapter">
+        <h2 class="chapter-title">7. CSS Grid - Layout Moderno</h2>
+        <div class="chapter-content">
+            <p>CSS Grid é o sistema de layout bidimensional mais poderoso do CSS, perfeito para criar layouts complexos e responsivos em duas dimensões (linhas e colunas).</p>
+            
+            <h3>Conceitos Fundamentais:</h3>
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>.grid-container {
     display: grid;
@@ -313,32 +457,28 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }</code></pre>
-              </div>
-
-              <div class="warning-box">
-                <i class="fas fa-exclamation-triangle"></i>
-                <strong>Dica Pro:</strong> Combine Flexbox (para componentes)
-                com Grid (para layout da página) para o melhor dos dois mundos!
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 8 -->
-          <section id="cap8" class="chapter">
-            <h2 class="chapter-title">8. Responsividade e Mobile First</h2>
-            <div class="chapter-content">
-              <p>
-                Mais de 50% do tráfego web vem de dispositivos móveis. Criar
-                sites responsivos não é mais opcional - é obrigatório!
-              </p>
-
-              <h3>Media Queries Essenciais:</h3>
-              <div class="code-block">
+            
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Dica Pro:</strong> Combine Flexbox (para componentes) com Grid (para layout da página) para o melhor dos dois mundos!
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 8 -->
+    <section id="cap8" class="chapter">
+        <h2 class="chapter-title">8. Responsividade e Mobile First</h2>
+        <div class="chapter-content">
+            <p>Mais de 50% do tráfego web vem de dispositivos móveis. Criar sites responsivos não é mais opcional - é obrigatório!</p>
+            
+            <h3>Media Queries Essenciais:</h3>
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>/* Mobile First - Base para mobile */
 .container {
@@ -363,46 +503,41 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }</code></pre>
-              </div>
-
-              <div class="tip-box">
-                <i class="fas fa-mobile-alt"></i>
-                <strong>Mobile First:</strong> Comece pelo design mobile e
-                depois melhore para telas maiores! Isso garante performance e
-                melhor experiência.
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 9 -->
-          <section id="cap9" class="chapter">
-            <h2 class="chapter-title">9. Animações e Transições</h2>
-            <div class="chapter-content">
-              <p>
-                Animações trazem vida ao seu site! Com CSS você pode criar desde
-                micro-interações até animações complexas sem JavaScript.
-              </p>
-
-              <h3>Transitions vs Animations:</h3>
-              <div class="comparison-table">
+            
+            <div class="tip-box">
+                <i class="fas fa-mobile-alt"></i>
+                <strong>Mobile First:</strong> Comece pelo design mobile e depois melhore para telas maiores! Isso garante performance e melhor experiência.
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 9 -->
+    <section id="cap9" class="chapter">
+        <h2 class="chapter-title">9. Animações e Transições</h2>
+        <div class="chapter-content">
+            <p>Animações trazem vida ao seu site! Com CSS você pode criar desde micro-interações até animações complexas sem JavaScript.</p>
+            
+            <h3>Transitions vs Animations:</h3>
+            <div class="comparison-table">
                 <div class="comparison-item">
-                  <strong>Transitions</strong>
-                  <p>Mudanças suaves entre estados (hover, focus)</p>
-                  <code class="small-code">transition: all 0.3s ease;</code>
+                    <strong>Transitions</strong>
+                    <p>Mudanças suaves entre estados (hover, focus)</p>
+                    <code class="small-code">transition: all 0.3s ease;</code>
                 </div>
                 <div class="comparison-item">
-                  <strong>Animations</strong>
-                  <p>Sequências complexas e loops</p>
-                  <code class="small-code">animation: fadeIn 2s infinite;</code>
+                    <strong>Animations</strong>
+                    <p>Sequências complexas e loops</p>
+                    <code class="small-code">animation: fadeIn 2s infinite;</code>
                 </div>
-              </div>
-
-              <div class="code-block">
+            </div>
+            
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>/* Transição suave */
 .botao {
@@ -428,34 +563,31 @@
 .elemento {
     animation: fadeInUp 0.6s ease-out;
 }</code></pre>
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 10 -->
-          <section id="cap10" class="chapter">
-            <h2 class="chapter-title">10. Projeto Prático 1 - Landing Page</h2>
-            <div class="chapter-content">
-              <p>
-                Vamos construir uma landing page completa aplicando todos os
-                conceitos aprendidos!
-              </p>
-
-              <h3>Estrutura do Projeto:</h3>
-              <ul>
+        </div>
+    </section>
+    
+    <!-- Capítulo 10 -->
+    <section id="cap10" class="chapter">
+        <h2 class="chapter-title">10. Projeto Prático 1 - Landing Page</h2>
+        <div class="chapter-content">
+            <p>Vamos construir uma landing page completa aplicando todos os conceitos aprendidos!</p>
+            
+            <h3>Estrutura do Projeto:</h3>
+            <ul>
                 <li>Header com navbar responsiva</li>
                 <li>Hero section com call-to-action</li>
                 <li>Grid de features/services</li>
                 <li>Formulário de contato</li>
                 <li>Footer com links sociais</li>
-              </ul>
-
-              <div class="code-block">
+            </ul>
+            
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">HTML/CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">HTML/CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>&lt;!-- Estrutura base do projeto --&gt;
 &lt;header class="header"&gt;
@@ -468,34 +600,27 @@
         &lt;/ul&gt;
     &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
-              </div>
-
-              <div class="exercise-box">
-                <i class="fas fa-code-branch"></i>
-                <strong>Projeto Final:</strong> Crie sua própria landing page!
-                Use Flexbox ou Grid, adicione animações suaves e torne-a
-                responsiva.
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 11 -->
-          <section id="cap11" class="chapter">
-            <h2 class="chapter-title">
-              11. Projeto Prático 2 - Cards Interativos
-            </h2>
-            <div class="chapter-content">
-              <p>
-                Crie cards interativos para mostrar produtos, serviços ou posts
-                do blog com efeitos modernos.
-              </p>
-
-              <div class="code-block">
+            
+            <div class="exercise-box">
+                <i class="fas fa-code-branch"></i>
+                <strong>Projeto Final:</strong> Crie sua própria landing page! Use Flexbox ou Grid, adicione animações suaves e torne-a responsiva.
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 11 -->
+    <section id="cap11" class="chapter">
+        <h2 class="chapter-title">11. Projeto Prático 2 - Cards Interativos</h2>
+        <div class="chapter-content">
+            <p>Crie cards interativos para mostrar produtos, serviços ou posts do blog com efeitos modernos.</p>
+            
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">CSS</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">CSS</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code>.card {
     background: white;
@@ -538,44 +663,30 @@
 .btn-card:hover {
     background: #3a5a8c;
 }</code></pre>
-              </div>
             </div>
-          </section>
-
-          <!-- Capítulo 12 -->
-          <section id="cap12" class="chapter">
-            <h2 class="chapter-title">12. Publicando seu Site</h2>
-            <div class="chapter-content">
-              <p>
-                Seu site está pronto! Agora vamos publicá-lo gratuitamente
-                usando GitHub Pages.
-              </p>
-
-              <h3>Passo a Passo:</h3>
-              <ol>
-                <li>
-                  <strong>Crie um repositório no GitHub</strong> (ex: meu-site)
-                </li>
-                <li>
-                  <strong>Envie seus arquivos</strong> (index.html, css/, js/)
-                  para o repositório
-                </li>
-                <li>
-                  <strong>Ative o GitHub Pages</strong>: Settings > Pages >
-                  Branch main
-                </li>
-                <li>
-                  <strong>Acesse seu site</strong> em:
-                  https://seuusuario.github.io/meu-site/
-                </li>
-              </ol>
-
-              <div class="code-block">
+        </div>
+    </section>
+    
+    <!-- Capítulo 12 -->
+    <section id="cap12" class="chapter">
+        <h2 class="chapter-title">12. Publicando seu Site</h2>
+        <div class="chapter-content">
+            <p>Seu site está pronto! Agora vamos publicá-lo gratuitamente usando GitHub Pages.</p>
+            
+            <h3>Passo a Passo:</h3>
+            <ol>
+                <li><strong>Crie um repositório no GitHub</strong> (ex: meu-site)</li>
+                <li><strong>Envie seus arquivos</strong> (index.html, css/, js/) para o repositório</li>
+                <li><strong>Ative o GitHub Pages</strong>: Settings > Pages > Branch main</li>
+                <li><strong>Acesse seu site</strong> em: https://seuusuario.github.io/meu-site/</li>
+            </ol>
+            
+            <div class="code-block">
                 <div class="code-header">
-                  <span class="code-language">Git Commands</span>
-                  <button class="copy-code" onclick="copyCode(this)">
-                    <i class="far fa-copy"></i> Copiar
-                  </button>
+                    <span class="code-language">Git Commands</span>
+                    <button class="copy-code" onclick="copyCode(this)">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
                 </div>
                 <pre><code># Comandos para publicar
 git init
@@ -584,16 +695,15 @@ git commit -m "Meu primeiro site"
 git branch -M main
 git remote add origin https://github.com/seuusuario/meu-site.git
 git push -u origin main</code></pre>
-              </div>
-
-              <div class="tip-box">
-                <i class="fas fa-rocket"></i>
-                <strong>Parabéns!</strong> Você completou o ebook! Agora é hora
-                de praticar, construir projetos e continuar aprendendo. O céu é
-                o limite! 🚀
-              </div>
             </div>
-          </section>
+            
+            <div class="tip-box">
+                <i class="fas fa-rocket"></i>
+                <strong>Parabéns!</strong> Você completou o ebook! Agora é hora de praticar, construir projetos e continuar aprendendo. O céu é o limite! 🚀
+            </div>
+        </div>
+    </section>
+</article>
         </article>
       </main>
 
