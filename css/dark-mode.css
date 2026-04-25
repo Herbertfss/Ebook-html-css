@@ -1,0 +1,209 @@
+/* ========================================
+   DARK-MODE.CSS - Estilos Específicos do Tema Escuro
+   ======================================== */
+
+/* Estes estilos complementam as variáveis CSS definidas pelo JavaScript */
+/* As cores principais são controladas pelo JS, estes são estilos específicos */
+
+/* Ajustes para o modo escuro */
+.dark-mode .code-block {
+    background: #0f172a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .code-header {
+    background: #1e293b;
+    border-bottom-color: #334155;
+}
+
+.dark-mode pre {
+    background: #0f172a;
+}
+
+.dark-mode pre code {
+    color: #e2e8f0;
+}
+
+/* Boxes de dica no modo escuro */
+.dark-mode .tip-box,
+.dark-mode .warning-box,
+.dark-mode .exercise-box {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .tip-box {
+    border-left-color: var(--primary-color);
+}
+
+.dark-mode .warning-box {
+    border-left-color: var(--warning-color);
+}
+
+.dark-mode .exercise-box {
+    border-left-color: var(--success-color);
+}
+
+/* Cards e componentes no escuro */
+.dark-mode .semantic-card,
+.dark-mode .comparison-item {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+.dark-mode .card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* Toast notification no escuro */
+.dark-mode .toast {
+    background: var(--bg-secondary);
+    border-left-color: var(--primary-color);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar no modo escuro */
+.dark-mode ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Links do sumário no escuro */
+.dark-mode .toc-link {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+.dark-mode .toc-link:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.dark-mode .toc-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Botão de copiar no escuro */
+.dark-mode .copy-code {
+    color: #94a3b8;
+}
+
+.dark-mode .copy-code:hover {
+    background: #334155;
+    color: white;
+}
+
+/* Header e footer no escuro */
+.dark-mode .header {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.dark-mode .footer {
+    background: var(--bg-secondary);
+}
+
+/* Tabela de comparação no escuro */
+.dark-mode .comparison-item code {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Código inline no escuro */
+.dark-mode code {
+    background: rgba(255, 255, 255, 0.1);
+    color: #90cdf4;
+}
+
+/* Inputs e formulários no escuro (se houver) */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Links no escuro */
+.dark-mode a {
+    color: #90cdf4;
+}
+
+.dark-mode a:hover {
+    color: #63b3ed;
+}
+
+/* Stats badges no escuro */
+.dark-mode .stat {
+    color: var(--text-muted);
+}
+
+/* Badge do ebook no escuro */
+.dark-mode .ebook-badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
+/* Título com gradiente no escuro */
+.dark-mode .ebook-title {
+    background: linear-gradient(135deg, #90cdf4, var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Progress bar no escuro */
+.dark-mode .progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Botões no escuro */
+.dark-mode .btn {
+    background: var(--primary-color);
+}
+
+.dark-mode .btn:hover {
+    background: var(--primary-dark);
+}
+
+.dark-mode .btn-outline {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Social links no escuro */
+.dark-mode .social-links a {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.dark-mode .social-links a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Transição suave para todas as mudanças de cor */
+.dark-mode * {
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                color 0.3s ease, 
+                box-shadow 0.3s ease;
+}

@@ -43,7 +43,7 @@ function setTheme(theme) {
 
     document.body.classList.add("dark-mode");
   } else {
-    // Cores do modo claro (reset para variáveis originais)
+    // Cores do modo claro (reset para variáveis originais do base.css)
     root.style.setProperty("--text-primary", "#1e1e2f");
     root.style.setProperty("--text-secondary", "#4a4a5a");
     root.style.setProperty("--text-muted", "#7a7a8a");
@@ -62,7 +62,7 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
-// Alternar tema
+// Alternar tema com animação
 function toggleTheme() {
   const currentTheme =
     localStorage.getItem("theme") ||
@@ -71,11 +71,14 @@ function toggleTheme() {
       : "light");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  // Animação de transição
+  // Adiciona transição temporária
   const transitionStyle = document.createElement("style");
   transitionStyle.textContent = `
         * {
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+            transition: background-color 0.3s ease, 
+                        color 0.3s ease, 
+                        border-color 0.3s ease,
+                        box-shadow 0.3s ease !important;
         }
     `;
   document.head.appendChild(transitionStyle);
@@ -94,7 +97,7 @@ function toggleTheme() {
   }
 }
 
-// Aplicar tema inicial
+// Inicializar quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", () => {
   const initialTheme = getInitialTheme();
   setTheme(initialTheme);
@@ -102,71 +105,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Adicionar evento ao botão
   const toggleBtn = document.getElementById("darkModeToggle");
   if (toggleBtn) {
-    toggleBtn.addEventListener("click", toggleTheme);
+    // Remove event listener antigo se existir
+    const newToggleBtn = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(newToggleBtn, toggleBtn);
+    newToggleBtn.addEventListener("click", toggleTheme);
   }
 
   // Ouvir mudanças na preferência do sistema
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        setTheme(e.matches ? "dark" : "light");
-      }
-    });
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  darkModeMediaQuery.addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      setTheme(e.matches ? "dark" : "light");
+    }
+  });
 });
 
-// Estilos adicionais para o modo escuro
-const darkModeStyles = document.createElement("style");
-darkModeStyles.textContent = `
-    .dark-mode .code-block {
-        background: #0f172a;
-    }
-    
-    .dark-mode .code-header {
-        background: #1e293b;
-        border-bottom-color: #334155;
-    }
-    
-    .dark-mode pre {
-        background: #0f172a;
-    }
-    
-    .dark-mode .tip-box,
-    .dark-mode .warning-box,
-    .dark-mode .exercise-box {
-        background: rgba(255, 255, 255, 0.05);
-    }
-    
-    .dark-mode .semantic-card,
-    .dark-mode .comparison-item {
-        background: var(--bg-tertiary);
-    }
-    
-    .dark-mode .toast {
-        background: var(--bg-secondary);
-        border-left-color: var(--primary-color);
-    }
-    
-    .dark-mode ::-webkit-scrollbar-track {
-        background: #1e293b;
-    }
-    
-    .dark-mode ::-webkit-scrollbar-thumb {
-        background: #475569;
-    }
-    
-    .dark-mode .toc-link {
-        background: var(--bg-tertiary);
-        border-color: var(--border-color);
-    }
-    
-    .dark-mode .toc-link:hover {
-        background: var(--primary-color);
-        color: white;
-    }
-    
-    .dark-mode .copy-code:hover {
-        background: #475569;
-    }
-`;
-document.head.appendChild(darkModeStyles);
+// Keyboard shortcut: Ctrl + D
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === "d") {
+    e.preventDefault();
+    toggleTheme();
+  }
+});
+
+console.log("🌓 Dark mode initialized");
