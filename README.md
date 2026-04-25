@@ -101,11 +101,16 @@ git clone https://github.com/Herbertfss/Ebook-html-css.git
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
 ## 👨‍💻 Autor
-Herbert Freire
 
-- GitHub: @Herbertfss
+<img src="https://github.com/Herbertfss.png" width="100" height="100" style="border-radius: 50%">
 
-- LinkedIn: Herbert Freire
+**Herbert Freire dos Santos Sousa**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Herbertfss-181717?logo=github)](https://github.com/Herbertfss)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Herbert%20Freire-blue?logo=linkedin)](https://www.linkedin.com/in/herbert-freire/)
+
+**GitHub:** [@Herbertfss](https://github.com/Herbertfss)  
+**Projeto:** [Ebook-html-css](https://github.com/Herbertfss/Ebook-html-css)
 
 ## ⭐ Agradecimentos
 - A toda comunidade de desenvolvimento web
